@@ -282,7 +282,11 @@
       renderSelectedClass();
       setFormStatus('success', 'Registration saved. We will send the class details soon.');
     } catch (error) {
-      setFormStatus('error', `${error.message} Please try again.`);
+      const message = typeof window.YogaFirebase?.getRegistrationErrorMessage === 'function'
+        ? window.YogaFirebase.getRegistrationErrorMessage(error)
+        : (error && error.message ? error.message : 'Registration could not be saved.');
+
+      setFormStatus('error', `${message} Please try again.`);
     } finally {
       state.submitting = false;
       validateAll(false);
