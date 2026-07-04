@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A clean responsive yoga webinar registration website.">
+    <title>Yoga Webinar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#registration">Skip to registration</a>
+
+    <header class="site-header">
+      <nav class="container nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="StillPoint Yoga Live home">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>Yoga Live</span>
+        </a>
+        <div class="nav-links">
+          <a href="#video">Watch</a>
+          <a href="#classes">Classes</a>
+          <a href="#stories">Stories</a>
+          <a class="btn btn-primary btn-sm" href="#registration" data-scroll-register>Join</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-pad" aria-labelledby="hero-title">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy-block reveal">
+              <p class="eyebrow">Live guided yoga</p>
+              <h1 id="hero-title">A softer way to begin again.</h1>
+              <p class="hero-lede">Join a focused online yoga session built for steady breath, gentle strength, and a calmer nervous system.</p>
+            </div>
+            <aside class="hero-note reveal" aria-label="Session highlights">
+              <span>Free live intro</span>
+              <span>Beginner friendly</span>
+              <span>Online access</span>
+            </aside>
+          </div>
+
+          <div class="banner-stage reveal">
+            <div id="bannerStatus" class="status-region" aria-live="polite"></div>
+            <div id="bannerMount" aria-label="Webinar banners"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="video" class="section-pad" aria-labelledby="video-title">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Watch first</p>
+            <h2 id="video-title">See the practice before you reserve your mat.</h2>
+          </div>
+          <div id="videoStatus" class="status-region" aria-live="polite"></div>
+          <div id="videoMount" class="video-layout"></div>
+        </div>
+      </section>
+
+      <section id="classes" class="section-pad" aria-labelledby="classes-title">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Choose a class</p>
+            <h2 id="classes-title">Pick the session that fits your rhythm.</h2>
+          </div>
+          <div id="classStatus" class="status-region" aria-live="polite"></div>
+          <div id="classMount" class="class-grid"></div>
+        </div>
+      </section>
+
+      <section id="stories" class="section-pad" aria-labelledby="stories-title">
+        <div class="container">
+          <div class="section-title reveal">
+            <p class="eyebrow">Student notes</p>
+            <h2 id="stories-title">Small shifts people could actually feel.</h2>
+          </div>
+          <div id="testimonialStatus" class="status-region" aria-live="polite"></div>
+          <div id="testimonialMount"></div>
+        </div>
+      </section>
+
+      <section id="registration" class="section-pad registration-band" aria-labelledby="registration-title">
+        <div class="container">
+          <div class="registration-layout">
+            <div class="registration-copy reveal">
+              <p class="eyebrow">Reserve your place</p>
+              <h2 id="registration-title">Your spot is one breath away.</h2>
+              <p>Choose a class, add your details, and submit your registration. The selected class ID is saved with your entry.</p>
+              <div id="selectedClassCard" class="selected-class-card" aria-live="polite">
+                Choose a class from the list, or select one in the form.
+              </div>
+            </div>
+
+            <form id="registrationForm" class="registration-form reveal" novalidate>
+              <div class="form-grid">
+                <div>
+                  <label for="nameInput" class="form-label">Name</label>
+                  <input id="nameInput" name="Name" class="form-control" type="text" autocomplete="name" required>
+                  <div id="nameError" class="field-error" aria-live="polite"></div>
+                </div>
+                <div>
+                  <label for="phoneInput" class="form-label">Phone</label>
+                  <input id="phoneInput" name="Phone" class="form-control" type="tel" inputmode="numeric" autocomplete="tel" required>
+                  <div id="phoneError" class="field-error" aria-live="polite"></div>
+                </div>
+                <div class="form-wide">
+                  <label for="emailInput" class="form-label">Email</label>
+                  <input id="emailInput" name="Email" class="form-control" type="email" autocomplete="email" required>
+                  <div id="emailError" class="field-error" aria-live="polite"></div>
+                </div>
+                <div class="form-wide">
+                  <label for="classSelect" class="form-label">Class</label>
+                  <select id="classSelect" name="Class_ID" class="form-select" required>
+                    <option value="">Loading classes...</option>
+                  </select>
+                  <div id="classError" class="field-error" aria-live="polite"></div>
+                </div>
+              </div>
+              <button id="submitButton" class="btn btn-primary btn-lg w-100" type="submit" disabled>Submit Registration</button>
+              <div id="formStatus" class="form-status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>StillPoint Yoga Live</span>
+        <span>Built for calm registration.</span>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
