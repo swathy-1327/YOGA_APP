@@ -1,11 +1,11 @@
 (function () {
   const firebaseConfig = {
-    apiKey: '',
-    authDomain: '',
-    projectId: '',
-    storageBucket: '',
-    messagingSenderId: '',
-    appId: '',
+    apiKey: "AIzaSyAa8J0mCvUmPBA2XQdRRlUfawOHnFncW9c",
+    authDomain: "yogaapp-cd851.firebaseapp.com",
+    projectId: "yogaapp-cd851",
+    storageBucket: "yogaapp-cd851.firebasestorage.app",
+    messagingSenderId: "99431266615",
+    appId: "1:99431266615:web:a2fc1be390f58b06fdc2b2"
   };
 
   let database = null;
