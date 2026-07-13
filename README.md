@@ -1,6 +1,6 @@
 # StillPoint Yoga Live
 
-A responsive yoga webinar landing page for a friend, built with HTML, Bootstrap 5, CSS, vanilla JavaScript, Firebase, and the same webinar backend APIs.
+A responsive yoga webinar landing page , built with HTML, Bootstrap 5, CSS, vanilla JavaScript, Firebase, and the same webinar backend APIs.
 
 ## Included Sections
 
